@@ -1,0 +1,10 @@
+.section { background: var(--gold); padding: 56px 48px; }
+.inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+.left h2 { font-family: 'Alfa Slab One', serif; font-size: 32px; color: var(--navy); line-height: 1.15; margin-bottom: 16px; }
+.left p { font-size: 15px; color: var(--navy); opacity: 0.8; line-height: 1.7; }
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.card { background: var(--navy); padding: 24px; border-radius: 4px; }
+.number { font-family: 'Alfa Slab One', serif; font-size: 36px; color: var(--gold); line-height: 1; margin-bottom: 6px; }
+.label { font-size: 12px; color: rgba(255,255,255,0.6); letter-spacing: 1px; text-transform: uppercase; }
+@media (max-width: 900px) { .inner { grid-template-columns: 1fr; } }
+@media (max-width: 480px) { .section { padding: 40px 24px; } }

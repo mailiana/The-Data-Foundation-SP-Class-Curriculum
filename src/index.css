@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --gold: #f8d618;
+  --navy: #111835;
+  --navy-mid: #1a2448;
+  --white: #ffffff;
+  --text-muted: #6b7a99;
+  --border: #e8ecf5;
+  --section-bg: #f5f7fc;
+  --sql-blue: #2563eb;
+  --sql-blue-dark: #1d4ed8;
+  --sql-blue-bg: #eff6ff;
+  --python-teal: #0f766e;
+  --python-teal-dark: #0c6660;
+  --python-teal-bg: #f0fdfa;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--white);
+  color: var(--navy);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}

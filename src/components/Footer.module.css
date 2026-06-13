@@ -1,0 +1,20 @@
+.footer { background: var(--navy); border-top: 1px solid rgba(255,255,255,0.06); }
+.inner { max-width: 1200px; margin: 0 auto; padding: 0 48px; }
+.top { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px; padding: 52px 0 40px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+.brand { font-family: 'Alfa Slab One', serif; font-size: 16px; color: var(--white); margin-bottom: 12px; }
+.slash { color: var(--gold); }
+.tagline { font-size: 13px; color: rgba(255,255,255,0.4); line-height: 1.6; max-width: 280px; }
+.navLabel { font-size: 9px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); font-weight: 700; margin-bottom: 16px; }
+.nav ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.link { font-size: 13px; color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.15s; }
+.link:hover { color: var(--gold); }
+.infoItem { display: flex; flex-direction: column; gap: 2px; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.04); }
+.infoItem:last-child { border-bottom: none; }
+.key { font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.3); font-weight: 600; }
+.val { font-size: 12px; color: rgba(255,255,255,0.65); font-weight: 500; }
+.bottom { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 20px 0; flex-wrap: wrap; }
+.copy { font-size: 11px; color: rgba(255,255,255,0.25); }
+.toTop { display: flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: rgba(255,255,255,0.4); background: none; border: 1px solid rgba(255,255,255,0.1); padding: 6px 14px; border-radius: 3px; cursor: pointer; transition: color 0.15s, border-color 0.15s; }
+.toTop:hover { color: var(--gold); border-color: rgba(248,214,24,0.3); }
+@media (max-width: 900px) { .top { grid-template-columns: 1fr 1fr; } .brandCol { grid-column: span 2; } }
+@media (max-width: 600px) { .inner { padding: 0 24px; } .top { grid-template-columns: 1fr; } .brandCol { grid-column: span 1; } .bottom { flex-direction: column; align-items: flex-start; } }

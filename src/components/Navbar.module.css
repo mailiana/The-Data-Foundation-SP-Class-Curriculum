@@ -1,0 +1,78 @@
+.nav {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(17,24,53,0.94);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  transition: box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.nav.scrolled {
+  box-shadow: 0 2px 24px rgba(0,0,0,0.3);
+  border-bottom-color: rgba(248,214,24,0.15);
+}
+.inner {
+  max-width: 1296px; margin: 0 auto;
+  padding: 0 48px; height: 64px;
+  display: flex; align-items: center; gap: 24px;
+}
+.brand {
+  display: flex; align-items: center; gap: 10px;
+  text-decoration: none; flex-shrink: 0;
+}
+.brand:focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; border-radius: 2px; }
+.dot { width: 8px; height: 8px; background: var(--gold); border-radius: 50%; flex-shrink: 0; }
+.brandText { font-family: 'Alfa Slab One', serif; font-size: 15px; color: var(--white); }
+.accent { color: var(--gold); }
+.brandSub {
+  font-size: 10px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase;
+  color: rgba(255,255,255,0.35); padding-left: 10px;
+  border-left: 1px solid rgba(255,255,255,0.15);
+}
+.links { list-style: none; display: flex; align-items: center; gap: 4px; flex: 1; }
+.link {
+  display: block; padding: 6px 14px; font-size: 13px; font-weight: 500;
+  color: rgba(255,255,255,0.6); text-decoration: none; border-radius: 3px;
+  transition: color 0.15s, background 0.15s; white-space: nowrap;
+}
+.link:hover { color: var(--white); background: rgba(255,255,255,0.07); }
+.link:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+.link.active { color: var(--gold); background: rgba(248,214,24,0.08); }
+.pills { display: flex; align-items: center; gap: 6px; flex-shrink: 0; }
+.pillSql, .pillPy, .pillDays {
+  font-size: 10px; font-weight: 700; letter-spacing: 1.5px;
+  text-transform: uppercase; padding: 4px 10px; border-radius: 2px;
+}
+.pillSql { background: rgba(37,99,235,0.2); color: #93c5fd; border: 1px solid rgba(37,99,235,0.3); }
+.pillPy  { background: rgba(15,118,110,0.2); color: #5eead4; border: 1px solid rgba(15,118,110,0.3); }
+.pillDays{ background: rgba(248,214,24,0.12); color: var(--gold); border: 1px solid rgba(248,214,24,0.25); }
+.burger {
+  display: none; flex-direction: column; justify-content: center; align-items: center;
+  gap: 5px; width: 40px; height: 40px;
+  background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 4px; cursor: pointer; margin-left: auto; flex-shrink: 0;
+}
+.burger:hover { background: rgba(255,255,255,0.1); border-color: rgba(248,214,24,0.3); }
+.burger:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+.burger span {
+  display: block; width: 18px; height: 2px; background: var(--white);
+  border-radius: 1px; transition: transform 0.2s, opacity 0.2s; transform-origin: center;
+}
+.burgerOpen span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.burgerOpen span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.burgerOpen span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.drawer { display: none; overflow: hidden; max-height: 0; background: var(--navy-mid); border-top: 1px solid rgba(255,255,255,0.06); transition: max-height 0.3s ease; }
+.drawer ul { list-style: none; padding: 8px 24px 4px; }
+.drawerLink {
+  display: block; padding: 12px 0; font-size: 15px; font-weight: 500;
+  color: rgba(255,255,255,0.7); text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.06); transition: color 0.15s;
+}
+.drawerLink:hover { color: var(--gold); }
+.drawerPills { display: flex; gap: 8px; padding: 12px 24px 20px; }
+.overlay { position: fixed; inset: 0; z-index: 99; background: rgba(0,0,0,0.4); }
+@media (max-width: 1100px) { .pills { display: none; } }
+@media (max-width: 900px) { .inner { padding: 0 24px; } .brandSub { display: none; } }
+@media (max-width: 768px) {
+  .links { display: none; } .pills { display: none; }
+  .burger { display: flex; } .drawer { display: block; }
+  .drawerOpen { max-height: 400px; }
+}

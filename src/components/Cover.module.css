@@ -1,0 +1,21 @@
+.cover { background: var(--navy); color: var(--white); padding: 80px 48px 72px; position: relative; overflow: hidden; min-height: 520px; display: flex; align-items: center; }
+.orb1 { position: absolute; top: -80px; right: -80px; width: 420px; height: 420px; background: radial-gradient(circle, var(--gold) 0%, transparent 70%); opacity: 0.06; border-radius: 50%; pointer-events: none; }
+.orb2 { position: absolute; bottom: -100px; left: 28%; width: 280px; height: 280px; background: radial-gradient(circle, #2563eb 0%, transparent 70%); opacity: 0.08; border-radius: 50%; pointer-events: none; }
+.grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px); background-size: 48px 48px; pointer-events: none; }
+.inner { position: relative; z-index: 1; max-width: 1200px; margin: 0 auto; width: 100%; }
+.brandRow { display: flex; align-items: center; gap: 12px; margin-bottom: 36px; }
+.dot { width: 8px; height: 8px; background: var(--gold); border-radius: 50%; flex-shrink: 0; }
+.brandName { font-family: 'Alfa Slab One', serif; font-size: 12px; letter-spacing: 2px; color: rgba(255,255,255,0.4); text-transform: uppercase; }
+.badgeRow { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; flex-wrap: wrap; }
+.badge { display: inline-block; background: var(--gold); color: var(--navy); font-size: 11px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; padding: 5px 14px; border-radius: 2px; }
+.badgeSub { font-size: 12px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.3); }
+.title { font-family: 'Alfa Slab One', serif; font-size: 60px; line-height: 1.03; color: var(--white); margin-bottom: 16px; }
+.accent { color: var(--gold); }
+.subtitle { font-size: 16px; color: rgba(255,255,255,0.5); margin-bottom: 52px; max-width: 520px; line-height: 1.6; }
+.meta { display: flex; flex-wrap: wrap; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 32px; }
+.metaItem { padding-right: 40px; }
+.metaItem:not(:last-child) { border-right: 1px solid rgba(255,255,255,0.08); margin-right: 40px; }
+.metaItem label { display: block; font-size: 9px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); font-weight: 700; margin-bottom: 5px; }
+.metaItem span { font-size: 14px; color: var(--white); font-weight: 500; }
+@media (max-width: 900px) { .cover { padding: 64px 24px 56px; min-height: auto; } .title { font-size: 44px; } }
+@media (max-width: 600px) { .title { font-size: 34px; } .meta { flex-direction: column; gap: 20px; } .metaItem { padding-right: 0; border-right: none !important; margin-right: 0 !important; } }

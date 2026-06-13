@@ -1,0 +1,12 @@
+.wrap { padding: 0 48px; margin: 48px 0 0; }
+.inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; }
+.label { padding: 14px 32px; font-family: 'Alfa Slab One', serif; font-size: 15px; letter-spacing: 1px; text-transform: uppercase; color: var(--white); white-space: nowrap; flex-shrink: 0; }
+.line { flex: 1; height: 3px; }
+.days { padding: 14px 24px; font-size: 13px; font-weight: 700; letter-spacing: 1px; white-space: nowrap; flex-shrink: 0; }
+.sql .label { background: var(--sql-blue); }
+.sql .line  { background: var(--sql-blue); }
+.sql .days  { background: var(--sql-blue-dark); color: rgba(255,255,255,0.8); }
+.python .label { background: var(--python-teal); }
+.python .line  { background: var(--python-teal); }
+.python .days  { background: var(--python-teal-dark); color: rgba(255,255,255,0.8); }
+@media (max-width: 768px) { .wrap { padding: 0 24px; margin: 32px 0 0; } .label { padding: 12px 20px; font-size: 13px; } .days { padding: 12px 16px; font-size: 12px; } }
